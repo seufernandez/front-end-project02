@@ -1,0 +1,281 @@
+:root{
+    --color-brownp: #140d06;
+    --color-brown2:#dd843b;
+    --color-gradient:linear-gradient(red, yellow);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+nav{
+    text-align: center;
+    padding: 18px;
+    background-color: var(--color-brownp);
+    margin: 0em 5em;
+    border-bottom: 1px solid var(--color-brown2)
+    
+}
+ 
+nav a{
+    padding: 4px 12px;
+    margin: 24px;
+    border: 2px solid #412813bd ;
+    color: var(--color-brown2);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+nav a:hover{
+    background-color: #965b2b;
+    color: var(--color-brownp);
+    border: 2px solid var(--color-brownp) ;
+    text-decoration: underline;
+
+    transition: 300ms;
+}
+
+
+
+
+
+body{
+    background-color: var(--color-brownp);
+}
+
+h1{
+    font-size: 2em;
+    color: var(--color-brown2);
+    text-align: center;
+    padding:24px;
+}
+
+.cards{
+    max-width:  800px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; 
+}
+
+.card {
+    background-color: #965b2b13;
+    color: var(--color-brown2);
+    border: 1px solid var(--color-brown2);
+    border-radius:16px;
+
+    display:grid;
+    position: relative;
+
+}
+
+.card__image-container img{
+    width: 100%;/*100% ta largura do pai que ele encontrar; no caso 800px do .cards*/
+    border-radius: 16px 16px 0 0 ;
+}
+
+.card__content,
+.card__info{
+    padding: 24px;
+
+
+}
+
+.card__info{
+    display: grid;
+    grid-auto-flow: var(--color-brown2);
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    align-items: center; /*alinhar no eixo x */
+
+}
+
+.card__price{
+    color:var(--color-brownp);
+    text-align: center;
+    padding: 4px 4px;
+    border-radius: 52px;
+    width: 28px;
+    height: 28px; 
+
+    position: absolute;
+    right: 24px;
+    cursor: pointer;
+
+}
+
+.card__price i{
+    color: var(--color-brown2);
+    font-size: 42px;
+    bottom: 0px;
+    right: -8px;
+    position: absolute;
+
+}
+ /* ================= MODAL OVERLAYYYYYYYYYY =========== */
+
+ .modal-overlay {
+     background-color:rgba(0,0,0,0.7);
+     width:100%;
+     height: 100%;
+
+     position: fixed;
+     top: 0;
+     opacity: 0;/*sumir overlay*/
+     visibility: hidden;/*pra nãp ficar rodando o pointer enquanto o overlay nao estiver ativo*/
+ }
+
+ .modal{
+     background-color:rgb(68, 41, 14);
+     width:90%;
+     height: 90%;
+
+     margin: 5vh auto; /*alinhado*/ 
+    
+    position: relative;
+ }
+
+ .modal .close-modal{
+     color: black;
+
+     /* para ajustar a posição do x precisa colocar o position relative, no caso tive que colocar no pai tambem pois senao o x ficaria fora da caixa, então ficamos com o position relative nos dois e no filho colocamos as metragens */
+     position: absolute;
+     right: 8px;
+     top: 8px;
+     cursor: pointer;/*mãozinha colocada devido a retirada do href no html*/
+ }
+
+
+ /* ========== MODAL ACTIVE ============ */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+iframe{
+    width:100%;
+    height:95%;
+
+    /*Ocorreu um problema que o elemento pai dele so preenchia uma parte do modal, entao tive que colocar o position absolute pra o video ocupar todo o quadro do modal, respeitando os limites do background*/
+
+    position:absolute;
+    top: 5%
+}
+
+
+
+
+
+
+
+/*=====================ABOUT====================================*/
+
+.card-box {
+
+    background-color: var(--color-brownp);
+    text-align: center;
+}
+
+#minhaFoto{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    margin: 50px auto 0;
+    border: 6px solid #965b2b67 ;
+
+}
+
+#meuNome{
+    font-size: 4em;
+    margin-top: 16px;
+    color: var(--color-brown2);
+    padding-bottom:4px;
+
+}
+
+#cracha{
+    font-size: 1.2em;
+    color: var(--color-brown2);
+    opacity: 60%;
+
+}
+
+#quote{
+    
+    color: var(--color-brown2);
+    font-size: 48px;
+    margin:40px 40px 0 40px;
+    opacity: 1;
+
+
+}
+
+#links-footer{
+    margin: 24px auto;
+}
+
+#links-footer a{
+    text-decoration: none;
+    color: var(--color-brown2);
+    margin: 1vw;
+    opacity: 50%;
+    padding: 8px ;
+
+}
+#links-footer a:hover{
+    padding: 8px ;
+    background-color: #965b2b;
+    color: var(--color-brownp);
+    text-decoration: underline;
+
+    transition: 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================FEATURED============================*/
+
+.featured {
+    background: #dd843b;
+    color: #140d06;
+    padding: 8px 24px;
+    position: absolute;
+    right: 5px;
+    top: -18px;
+    border-radius: 24px;
+    font-size: 18px;
+
+}
+
+.card.featured-wrapper {
+   background-color: #c0773b2c;
+    color: #dd843b;
+}
+
+.card.featured-wrapper .card__price i{
+    color: #dd843b;
+
+}
+

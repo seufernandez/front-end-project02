@@ -1,0 +1,56 @@
+{% extends "layout.njk" %}
+{% block head %}
+  <title>
+    Fernandes - Videos</title>
+{% endblock %}
+
+{% block content %}
+  <div class="card-box">
+    <header>
+      <h1>My videos</h1>
+    </header>
+  </div>
+  <section class="cards">
+
+      {% for item in items %} {#fazendo uma estrutura de repetição para os cards, e cada item de items ele vai chamar de item #}
+      
+      <div class="card {{ 'featured-wrapper'if item.featured }}"
+            
+         
+
+      >
+        <div class="card__image-container">
+          <img src="http://i3.ytimg.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{item.title}}"/>
+          {% if item.featured %}
+              <div class="featured">Featured</div>
+          {%endif%}
+        </div>
+        <div class="card__content">
+          <p>"{{item.title}}"</p>
+        </div>
+        <div class="card__info">
+          <p>{{item.durations}}</p>
+          <p class="card__price">
+            <i title="{{item.id}}" id="play" class="material-icons">play_circle</i>
+          </p>
+        </div>
+      </div>
+
+      {% endfor %}
+      
+      
+    </section>
+    <div class="modal-overlay">
+      <div class="modal">
+        <a class="close-modal">
+          <i class="material-icons">
+            close
+          </i>
+        </a>
+        <div class="modal-content">
+          <iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <script src="/scripts.js"></script>
+  {% endblock %}

@@ -1,0 +1,97 @@
+
+:root{
+    --color-brownp: #140d06;
+    --color-brown2:#814e24;
+
+
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+
+nav{
+    text-align: center;
+    padding: 18px;
+    background-color: var(--color-brownp);
+    margin: 0em 5em;
+    border-bottom: 1px solid var(--color-brown2)
+    
+}
+ 
+nav a{
+    padding: 4px 12px;
+    margin: 24px;
+    border: 2px solid #412813bd ;
+    color: var(--color-brown2);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: #965b2b;
+    color: var(--color-brownp);
+    border: 2px solid var(--color-brownp) ;
+    text-decoration: underline;
+
+    transition: 300ms;
+}
+
+#nav-active{
+    background-color: #965b2b;
+    color: var(--color-brownp);
+    border: 2px solid var(--color-brownp) ;
+    text-decoration: underline;
+}
+
+body{
+    background-color: var(--color-brownp);
+}
+
+.card-box{
+    background-color: var(--color-brownp);
+    text-align: center;
+
+
+}
+
+img{
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+    margin: 50px auto 0;
+    border: 6px solid #965b2b67 ;
+
+}
+
+h1{
+    font-size: 4em;
+    margin-top: 16px;
+    color: var(--color-brown2);
+
+}
+
+h3{
+    font-size: 1.2em;
+    color: #965b2b9d;
+
+}
+
+p{
+    
+    color: var(--color-brown2);
+    font-size: 48px;
+    margin:66px 40px 0 40px;
+
+
+}
+
+/* =================================== */
+
+

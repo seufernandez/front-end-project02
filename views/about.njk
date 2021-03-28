@@ -1,0 +1,27 @@
+{% extends "layout.njk" %}
+
+
+{% block head%}
+    <title> Fernandes - About</title>
+    {% endblock %}
+
+
+{% block content %}
+
+
+    <div class="card-box">
+      <img id = "minhaFoto" src="{{about.avatar_url}}" alt="imagem de {{about.name}}" />
+      <header>
+        <h1 id="meuNome">{{about.name}}</h1>
+        <h3 id="cracha">{{about.role}}</h3>
+        <p id="quote">{{about.description}}</p>
+      </header>
+
+      <div class="links" id = "links-footer">
+      {%for link in about.links %}
+        <a href="{{link.url}}" target="_blank">{{link.name}}</a>
+      {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}

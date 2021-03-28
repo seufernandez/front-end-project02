@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+  <head>
+
+    {% block head%}
+    <title> Fernandes </title>
+    {% endblock %}
+
+
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  
+</head>
+  <body>
+    <nav>
+      <a id="nav-active" href="/">About</a>
+      <a href="/portfolio">Videos</a>
+      <a
+      target="_blank" 
+      href="https://github.com/seufernandez"
+      >GitHub</a>
+    </nav>
+
+
+    {% block content %}{% endblock %}
+
+
+  </body>
+</html>
