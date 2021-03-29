@@ -45,10 +45,30 @@ server.get("/", function(req,res) {
 server.get("/portfolio", function(req,res) {
     
     
-    return res.render('portfolio', { items:videos })// {items: videos} = levando a variável "videos" para a página de portfolio
+    return res.render('portfolio', { items:videos })// {items: videos} = levando a variável "videos" para a página de portfolio onde vai encontar uma estrutura de repetição
 })
 
 
+
+
+
+server.get("/video", function(req,res) {
+    const id = req.query.id // tudo que coloquei na url depois de "id=" foi parar na pagina; http://localhost:3000/video?id=askda
+    const video = videos.find(function(video){// vai rodar todos elmentos do array "videos", executando essa função um por um
+        if (video.id == id) { // se a id do video que ele acaou de pegar for igual ao da variável acima, retornará a função
+            return true
+        }
+    })
+
+    if (!video) {
+        return res.send("Video not found")
+    }else{
+        return res.render("video", { item:video })//renderizando a pagina video.njk e recebendo a variável video e sendo utilizada no html como item
+    }
+    
+    res.send(id)
+
+})
 
 
 // server vai ficar escutando a porta 5000

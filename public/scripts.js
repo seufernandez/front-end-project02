@@ -5,9 +5,8 @@ var video
 for (let card of cards) {
     card.addEventListener("click", function(){
         const videoId = card.getAttribute("title");//pegando id
-        modalOverlay.classList.add("active");
-        modalOverlay.querySelector("iframe").src =`https://www.youtube.com/embed/${videoId}`
-        console.log(videoId);
+        
+        window.location.href = `/video?id=${videoId}` // quando clicar o js vai mandar o usuário pra página do video correto
     });
 }
 

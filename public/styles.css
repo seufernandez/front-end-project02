@@ -34,7 +34,7 @@ nav a{
 
 
 nav a:hover{
-    background-color: #965b2b;
+    background-color: var(--color-brown2);
     color: var(--color-brownp);
     border: 2px solid var(--color-brownp) ;
     text-decoration: underline;
@@ -235,8 +235,8 @@ iframe{
     background-color: #965b2b;
     color: var(--color-brownp);
     text-decoration: underline;
-
-    transition: 300ms;
+    opacity: 1;
+        transition: 300ms;
 }
 
 
@@ -277,5 +277,34 @@ iframe{
 .card.featured-wrapper .card__price i{
     color: #dd843b;
 
+}
+
+
+
+
+
+
+
+/* ============= video page =============== */
+
+.video{
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.card__video-container{
+    position: relative;
+    padding-top: 59%;
+
+}
+
+.card__video-container iframe{
+    border-radius: 16px 16px 0 0;
+    
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
 }
 
